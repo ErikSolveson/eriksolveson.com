@@ -1,3 +1,137 @@
+// variables
+$nav-color: #424651;
+$nav-background: #73eedc;
+$text-color: #031926;
+$hover-color: #6f2dbd;
+// linked sheets
+// primary styles
 svg {
   height: 100px;
+  width: 100px;
+}
+
+main {
+  margin-left: 5em;
+}
+header {
+  display: flex;
+  font-family: "Baloo 2";
+  align-items: center;
+}
+h2 {
+  font-size: 2em;
+}
+
+header h2 {
+  font-size: 2em;
+  margin-left: 1em;
+}
+
+nav {
+  width: 5rem;
+  height: 100vh;
+  background-color: $nav-background;
+  position: fixed;
+  transition: width 200ms ease;
+  border-radius: 1px;
+  &:hover {
+    width: 16rem;
+    .link-text,
+    .logo {
+      display: block;
+    }
+    .logo {
+      // transform: rotate(-180deg);
+    }
+  }
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.nav-item {
+  width: 100%;
+  &:last-child {
+    margin-top: auto;
+  }
+  &:hover {
+    svg,
+    .link-text {
+      color: $hover-color;
+    }
+  }
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: $text-color;
+  text-decoration: none;
+  text-align: center;
+  padding: 1rem 0;
+  svg {
+    min-width: 2rem;
+    max-width: 5rem;
+    margin: 0 1.5rem;
+  }
+}
+
+.gallery-container {
+  display: flex;
+  flex-flow: wrap;
+  background-color: #d5ede6;
+  padding: 1em;
+}
+.gallery-item {
+  margin: 1rem;
+  text-align: center;
+  text-decoration: none;
+  background-color: $nav-background;
+  padding-bottom: 0.5em;
+  &:hover {
+    filter: grayscale(75%);
+  }
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+
+.logo {
+  text-transform: uppercase;
+  padding-top: 1em;
+  display: none;
+  // transform: rotate(180deg);
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+    &:hover {
+      width: 100vw;
+    }
+  }
+  .logo {
+    display: none;
+  }
+  .nav-list {
+    flex-direction: row;
+    svg {
+      height: 3rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 600px) {
 }
