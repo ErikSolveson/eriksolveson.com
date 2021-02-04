@@ -4,6 +4,8 @@ $nav-background: #73eedc;
 $text-color: #031926;
 $hover-color: #6f2dbd;
 // linked sheets
+@import "_scrollbar.scss";
+
 // primary styles
 svg {
   height: 100px;
@@ -12,6 +14,8 @@ svg {
 
 main {
   margin-left: 5em;
+  margin-right: 5em;
+  max-width: 900px;
 }
 header {
   display: flex;
